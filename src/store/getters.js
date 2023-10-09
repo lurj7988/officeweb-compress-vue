@@ -1,7 +1,8 @@
 const getters = {
   sidebar: state => state.app.sidebar,
   size: state => state.app.size,
-  device: state => state.app.device
+  device: state => state.app.device,
+  url: state => state.compress.url
   // visitedViews: state => state.tagsView.visitedViews,
   // cachedViews: state => state.tagsView.cachedViews,
   // token: state => state.user.token,
