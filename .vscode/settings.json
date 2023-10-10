@@ -1,0 +1,34 @@
+// 将设置放入此文件中以覆盖默认设置
+{
+    "typescript.check.tscVersion": false,
+    "window.zoomLevel": 0,
+    "files.autoSave": "off",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "git.confirmSync": false,
+    "editor.minimap.enabled": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "git.autofetch": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "vue"
+    ],
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vetur.validation.template": true,
+    "vetur.format.enable": true,
+    "vetur.format.defaultFormatter.js": "none",
+    "vetur.format.defaultFormatter.html": "none",
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+    "prettier.trailingComma": "none",
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "workbench.settings.editor": "json"
+}

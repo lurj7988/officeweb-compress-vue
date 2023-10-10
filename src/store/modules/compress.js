@@ -1,9 +1,9 @@
 const state = {
-  url: 'http://localhost:8080'
+  node: {}
 }
 
 const mutations = {
-  CHANGE_URL: (state, { key, value }) => {
+  CHANGE_NODE: (state, { key, value }) => {
     // eslint-disable-next-line no-prototype-builtins
     if (state.hasOwnProperty(key)) {
       state[key] = value
@@ -12,8 +12,8 @@ const mutations = {
 }
 
 const actions = {
-  changeUrl({ commit }, data) {
-    commit('CHANGE_URL', data)
+  changeNode({ commit }, data) {
+    commit('CHANGE_NODE', data)
   }
 }
 

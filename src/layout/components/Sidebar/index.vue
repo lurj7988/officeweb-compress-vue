@@ -261,9 +261,9 @@ export default {
           if (supports.indexOf(suffix) > 0) {
             // window.open('compress?md5=' + md5 + '&id=' + data.id)
           } else {
-            this.$store.dispatch('compress/changeUrl', {
-              key: 'url',
-              value: data.title
+            this.$store.dispatch('compress/changeNode', {
+              key: 'node',
+              value: data
             })
           }
         }
@@ -290,12 +290,12 @@ export default {
 </script>
 
 <style>
-  .custom-tree-node {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
-    font-size: 15px;
-    padding-right: 8px;
-  }
+.custom-tree-node {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  font-size: 15px;
+  padding-right: 8px;
+}
 </style>
