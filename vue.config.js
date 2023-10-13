@@ -17,5 +17,17 @@ module.exports = defineConfig({
         '@': resolve('src')
       }
     }
+  },
+  devServer: {
+    port: 8081,
+    proxy: {
+      '/getCompress': {
+        target: 'http://localhost:8080',
+        changeOrigin: true
+        // pathRewrite: {
+        //   '^/api': '/mock'
+        // }
+      }
+    }
   }
 })

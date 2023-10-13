@@ -5,7 +5,7 @@
     "files.autoSave": "off",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "git.confirmSync": false,
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "workbench.startupEditor": "newUntitledFile",
     "git.autofetch": true,
     "eslint.validate": [

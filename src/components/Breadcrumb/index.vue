@@ -18,7 +18,8 @@ export default {
     ]),
     levelList() {
       const { href } = this.node
-      return href ? href.split('/') : []
+      const level = [name]
+      return href ? level.concat(href.split('/')) : level
     }
   }
 }

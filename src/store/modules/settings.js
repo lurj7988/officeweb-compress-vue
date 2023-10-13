@@ -5,8 +5,6 @@ const { fixedHeader, sidebarLogo } = defaultSettings
 
 const state = {
   theme: variables.theme,
-  // showSettings: showSettings,
-  // tagsView: tagsView,
   fixedHeader: fixedHeader,
   sidebarLogo: sidebarLogo
 }
