@@ -18,7 +18,7 @@ export default {
     ]),
     levelList() {
       const { href } = this.node
-      const level = [name]
+      const level = [window.appSettings.name]
       return href ? level.concat(href.split('/')) : level
     }
   }

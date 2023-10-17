@@ -26,8 +26,9 @@ export default {
   data() {
     return {
       data: [],
-      // eslint-disable-next-line no-undef
-      expandedKeys: [key],
+      key: window.appSettings.key,
+      supports: window.appSettings.supports,
+      expandedKeys: [window.appSettings.key],
       defaultProps: {
         children: 'children',
         label: 'title'
@@ -69,10 +70,8 @@ export default {
         if (data.title) {
           const name = data.title
           const suffix = name.substring(name.lastIndexOf('.') + 1)
-          // eslint-disable-next-line no-undef
-          if (supports.indexOf(suffix) > 0) {
-            // eslint-disable-next-line no-undef
-            window.open('compress?key=' + key + '&id=' + data.id)
+          if (this.supports.indexOf(suffix) > 0) {
+            window.open('compress?key=' + this.key + '&id=' + data.id)
           } else {
             this.$store.dispatch('compress/changeNode', {
               key: 'node',
@@ -104,11 +103,10 @@ export default {
     },
     postData() {
       axios({
-        url: 'getCompress',
+        url: 'structure',
         method: 'post',
         params: {
-          // eslint-disable-next-line no-undef
-          key: key
+          key: this.key
         }
       }).then(res => {
         this.data = res.data

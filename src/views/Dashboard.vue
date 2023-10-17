@@ -23,8 +23,8 @@ export default {
       'loading'
     ]),
     title() {
-      // eslint-disable-next-line no-undef
-      return this.node.id ? 'http://localhost:8080/' + 'compress?key=' + key + '&id=' + this.node.id : ''
+      const key = window.appSettings.key
+      return this.node.id ? process.env.VUE_APP_IFRAME_URL + 'compress?key=' + key + '&id=' + this.node.id : ''
     }
   },
   mounted() {

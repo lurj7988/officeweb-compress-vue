@@ -6,12 +6,15 @@ function resolve(dir) {
 }
 
 module.exports = defineConfig({
+  publicPath: process.env.NODE_ENV === 'production' ? 'compress-vue' : '/',
+  productionSourceMap: false, // 不生成js.map文件
+  filenameHashing: false, // 生成文件不带hash值
   transpileDependencies: true,
   lintOnSave: false,
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
     // it can be accessed in index.html to inject the correct title.
-    name: 'vue-admin-template',
+    name: 'officeweb-compress',
     resolve: {
       alias: {
         '@': resolve('src')
@@ -21,7 +24,7 @@ module.exports = defineConfig({
   devServer: {
     port: 8081,
     proxy: {
-      '/getCompress': {
+      '/structure': {
         target: 'http://localhost:8080',
         changeOrigin: true
         // pathRewrite: {

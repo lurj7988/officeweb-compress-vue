@@ -19,6 +19,19 @@ export const constantRoutes = [
         meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
       }
     ]
+  },
+  {
+    path: '/compress',
+    component: Layout,
+    redirect: '/compress',
+    children: [
+      {
+        path: '/compress',
+        component: () => import('@/views/Dashboard'),
+        name: 'Dashboard',
+        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+      }
+    ]
   }
 ]
 const createRouter = () =>
