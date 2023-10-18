@@ -8,7 +8,7 @@ import '@/styles/index.scss' // global css
 
 import App from './App.vue'
 import store from './store'
-import router from './router'
+// import router from './router'
 
 Vue.config.productionTip = false
 
@@ -18,6 +18,6 @@ window.appSettings = process.env.NODE_ENV === 'production' ? window.appSettings 
 
 new Vue({
   render: h => h(App),
-  router,
+  // router,
   store
 }).$mount('#app')

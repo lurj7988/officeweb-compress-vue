@@ -1,46 +1,46 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+// import Vue from 'vue'
+// import Router from 'vue-router'
 
-Vue.use(Router)
+// Vue.use(Router)
 
-/* Layout */
-import Layout from '@/layout'
+// /* Layout */
+// import Layout from '@/layout'
 
-export const constantRoutes = [
-  {
-    path: '/',
-    component: Layout,
-    redirect: '/',
-    children: [
-      {
-        path: '/',
-        component: () => import('@/views/Dashboard'),
-        name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
-      }
-    ]
-  },
-  {
-    path: '/compress',
-    component: Layout,
-    redirect: '/compress',
-    children: [
-      {
-        path: '/compress',
-        component: () => import('@/views/Dashboard'),
-        name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
-      }
-    ]
-  }
-]
-const createRouter = () =>
-  new Router({
-    mode: 'history', // require service support
-    scrollBehavior: () => ({ y: 0 }),
-    routes: constantRoutes
-  })
+// export const constantRoutes = [
+//   {
+//     path: '/',
+//     component: Layout,
+//     redirect: '/',
+//     children: [
+//       {
+//         path: '/',
+//         component: () => import('@/views/Dashboard'),
+//         name: 'Dashboard',
+//         meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+//       }
+//     ]
+//   },
+//   {
+//     path: '/compress',
+//     component: Layout,
+//     redirect: '/compress',
+//     children: [
+//       {
+//         path: '/compress',
+//         component: () => import('@/views/Dashboard'),
+//         name: 'Dashboard',
+//         meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+//       }
+//     ]
+//   }
+// ]
+// const createRouter = () =>
+//   new Router({
+//     mode: 'history', // require service support
+//     scrollBehavior: () => ({ y: 0 }),
+//     routes: constantRoutes
+//   })
 
-const router = createRouter()
+// const router = createRouter()
 
-export default router
+// export default router

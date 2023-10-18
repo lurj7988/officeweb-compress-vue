@@ -2,22 +2,27 @@
   <section class="app-main">
     <transition name="fade-transform" mode="out-in">
       <keep-alive :include="cachedViews">
-        <router-view :key="key" />
+        <!-- <router-view :key="key" /> -->
+        <Dashboard />
       </keep-alive>
     </transition>
   </section>
 </template>
 
 <script>
+import Dashboard from '@/views/Dashboard.vue'
 export default {
   name: 'AppMain',
+  components: {
+    Dashboard
+  },
   computed: {
     cachedViews() {
       return []
-    },
-    key() {
-      return this.$route.path
     }
+    // key() {
+    //   return this.$route.path
+    // }
   }
 }
 </script>
